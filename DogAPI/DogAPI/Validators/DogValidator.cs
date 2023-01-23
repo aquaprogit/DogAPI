@@ -1,10 +1,13 @@
-﻿using DogAPI.DAL.Entities;
+﻿using DogAPI.Common.DTO;
+using DogAPI.DAL.Entities;
 
 using FluentValidation;
 
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+
 namespace DogAPI.Validators;
 
-public class DogValidator : AbstractValidator<Dog>
+public class DogValidator : AbstractValidator<DogDTO>
 {
     public DogValidator()
     {

@@ -8,7 +8,15 @@
 
   <ItemGroup>
     <Folder Include="Profiles\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DogAPI.DAL.csproj" />
+    <ProjectReference Include="..\DogAPI.Common\DogAPI.Common.csproj" />
   </ItemGroup>
 
 </Project>

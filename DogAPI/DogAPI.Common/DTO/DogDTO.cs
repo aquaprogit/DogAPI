@@ -1,9 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace DogAPI.DAL.Entities;
-public class Dog
+﻿namespace DogAPI.Common.DTO;
+public class DogDTO
 {
-    [Key]
     public string Name { get; set; } = string.Empty;
     public string Color { get; set; } = string.Empty;
     public int TailLength { get; set; }
