@@ -7,6 +7,7 @@ using DogAPI.BLL.Services;
 using FluentValidation.AspNetCore;
 using FluentValidation;
 using DogAPI.Validators;
+using DogAPI.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,14 +31,15 @@ builder.Services.AddValidatorsFromAssemblyContaining<DogValidator>();
 //Controllers
 builder.Services.AddControllers();
 
-// Add services to the container.
-
-builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddRateLimiting(builder.Configuration);
+
 var app = builder.Build();
+
+app.UseRateLimiting();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
