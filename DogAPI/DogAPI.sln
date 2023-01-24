@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogAPI", "DogAPI\DogAPI.csproj", "{9CDE51D9-7153-4447-8980-A7D03B23A66B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogAPI", "DogAPI\DogAPI.csproj", "{9CDE51D9-7153-4447-8980-A7D03B23A66B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogAPI.DAL", "DAL\DogAPI.DAL.csproj", "{1993FDEE-195B-45A6-900A-F76367FAB87D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogAPI.DAL", "DAL\DogAPI.DAL.csproj", "{1993FDEE-195B-45A6-900A-F76367FAB87D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogAPI.BLL", "DogAPI.BLL\DogAPI.BLL.csproj", "{3C912C51-849F-405C-B8F5-87C3D0690E59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogAPI.BLL", "DogAPI.BLL\DogAPI.BLL.csproj", "{3C912C51-849F-405C-B8F5-87C3D0690E59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogAPI.Common", "DogAPI.Common\DogAPI.Common.csproj", "{8AB8FB92-AA5E-4FDF-B416-27AB3324D7D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogAPI.Common", "DogAPI.Common\DogAPI.Common.csproj", "{8AB8FB92-AA5E-4FDF-B416-27AB3324D7D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{2D03D115-A5F7-4BC9-8818-238092087543}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8AB8FB92-AA5E-4FDF-B416-27AB3324D7D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AB8FB92-AA5E-4FDF-B416-27AB3324D7D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AB8FB92-AA5E-4FDF-B416-27AB3324D7D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D03D115-A5F7-4BC9-8818-238092087543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D03D115-A5F7-4BC9-8818-238092087543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D03D115-A5F7-4BC9-8818-238092087543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D03D115-A5F7-4BC9-8818-238092087543}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
