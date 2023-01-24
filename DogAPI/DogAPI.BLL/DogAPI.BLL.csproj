@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DogAPI.DAL.csproj" />
     <ProjectReference Include="..\DogAPI.Common\DogAPI.Common.csproj" />
+    <ProjectReference Include="..\DogAPI.DAL\DogAPI.DAL.csproj" />
   </ItemGroup>
 
 </Project>

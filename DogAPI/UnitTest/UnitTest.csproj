@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DogAPI.DAL.csproj" />
     <ProjectReference Include="..\DogAPI.BLL\DogAPI.BLL.csproj" />
     <ProjectReference Include="..\DogAPI\DogAPI.csproj" />
   </ItemGroup>
