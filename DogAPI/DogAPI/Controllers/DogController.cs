@@ -61,6 +61,10 @@ public class DogController : ControllerBase
         {
             return Ok(await _dogService.UpdateDog(name, dog));
         }
+        catch (KeyNotFoundException)
+        {
+            return NotFound(name);
+        }
         catch (Exception ex)
         {
             return BadRequest(ex.Message);
