@@ -10,10 +10,10 @@ public class RepoBase<TEntity, TKey> : IRepo<TEntity, TKey>
     private readonly bool _disposeContext;
     private bool _isDisposed;
 
-    public Context Context { get; }
+    private Context Context { get; }
     public DbSet<TEntity> Table { get; }
 
-    public RepoBase(Context context)
+    protected RepoBase(Context context)
     {
         Context = context ?? throw new ArgumentNullException(nameof(context));
         Table = Context.Set<TEntity>();

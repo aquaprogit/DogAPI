@@ -23,7 +23,7 @@ public class DogController : ControllerBase
     {
         try
         {
-            List<DogDTO>? result = pageNumber == null && pageSize == null
+            var result = pageNumber == null && pageSize == null
                 ? _dogService.GetDogs(attribute ?? "name", order)
                 : _dogService.GetDogs(attribute ?? "name", order, pageNumber!.Value, pageSize!.Value);
             return Ok(result);

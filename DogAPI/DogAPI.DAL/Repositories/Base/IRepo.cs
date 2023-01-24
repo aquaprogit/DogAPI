@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 namespace DogAPI.DAL.Repositories.Base;
-public interface IRepo<TEntity, TKey> : IDisposable
+public interface IRepo<TEntity, in TKey> : IDisposable
     where TEntity : class
     where TKey : IEquatable<TKey>
 {

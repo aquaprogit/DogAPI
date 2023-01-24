@@ -1,13 +1,13 @@
 ﻿using DogAPI.DAL.Entities;
-
 using Microsoft.EntityFrameworkCore;
 
 namespace DogAPI.DAL.EF;
-public class Context : DbContext
-{
-    public virtual DbSet<Dog> Dogs { get; set; }
 
-    protected Context(DbContextOptions options) : base(options) { }
+public sealed class Context : DbContext
+{
+    public DbSet<Dog> Dogs { get; set; } = null!;
+
+    private Context(DbContextOptions options) : base(options) { }
 
     public Context()
     {
@@ -16,6 +16,7 @@ public class Context : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=(local);Database=DogAPI;Trusted_Connection=True;TrustServerCertificate=True");
+        optionsBuilder.UseSqlServer(
+            "Server=(local);Database=DogAPI;Trusted_Connection=True;TrustServerCertificate=True");
     }
 }
