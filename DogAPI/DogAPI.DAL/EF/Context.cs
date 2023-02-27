@@ -6,6 +6,7 @@ namespace DogAPI.DAL.EF;
 public sealed class Context : DbContext
 {
     public DbSet<Dog> Dogs { get; set; } = null!;
+    public DbSet<User> Users { get; set; } = null!;
 
     private Context(DbContextOptions options) : base(options) { }
 

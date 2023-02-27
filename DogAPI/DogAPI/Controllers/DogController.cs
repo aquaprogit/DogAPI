@@ -1,6 +1,8 @@
 ﻿using DogAPI.BLL.Services.Interfaces;
 using DogAPI.Common.DTO;
 
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DogAPI.Controllers;
@@ -41,6 +43,7 @@ public class DogController : ControllerBase
     }
 
     [HttpPost("dog")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public async Task<IActionResult> InsertDog(DogDTO dog)
     {
         try
@@ -68,7 +71,7 @@ public class DogController : ControllerBase
         catch (Exception ex)
         {
             return BadRequest(ex.Message);
-        }   
+        }
     }
 
     [HttpDelete("dog/{name}")]
