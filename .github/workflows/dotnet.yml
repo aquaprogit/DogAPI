@@ -25,13 +25,6 @@ jobs:
       run: |
         cd DogAPI
         dotnet build
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: dist-without-markdown
-        path: |
-          dist
-          !dist/**/*.md
     - name: Test
       run: |
         cd DogAPI
@@ -44,5 +37,5 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: website
-        path: SimpleFeedReader/website/**
+        path: DogAPI/website
         if-no-files-found: error
